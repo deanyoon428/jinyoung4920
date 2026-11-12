@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#080808">
+<title>엄마의 예쁜 날들</title>
+<meta name="description" content="정진영의 칠순을 기념하는 우리 가족 사진첩">
+<link rel="stylesheet" href="styles.css">
+<script defer src="photos.js"></script>
+<script defer src="album.js"></script>
+</head>
+<body>
+<a class="skip" href="#albums">사진 모아보기로 건너뛰기</a>
+<header class="site-head">
+  <a class="wordmark" href="#top">JINYOUNG DAY</a>
+  <a href="#albums" class="nav-link">사진 모아보기</a>
+</header>
+<main id="top">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="hero-date"><time datetime="2026-11-12">2026. 11. 12</time></p>
+      <h1 id="hero-title">엄마의<br><em>예쁜 날들</em></h1>
+      <p class="dedication">정진영의 칠순을 축하하며</p>
+    </div>
+    <a class="begin" href="#story">추억 펼치기 <span aria-hidden="true">↓</span></a>
+  </section>
+  <div id="story" class="story">
+    <section class="scene scene-mom" aria-labelledby="mom-title">
+      <div class="scene-image"><img src="photo-01.webp" width="680" height="1020" alt="단풍나무 아래에서 웃는 어머니" fetchpriority="high"></div>
+      <div class="scene-text">
+        <h2 id="mom-title">단풍 아래에서</h2>
+        <p>엄마의 예쁜 날들을 한 장씩.</p>
+        <a class="chapter-link" href="#albums" data-chapter="mom">엄마 사진 보기 <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+    <section class="scene scene-family" aria-labelledby="family-title">
+      <div class="scene-image"><img src="photo-18.webp" width="1020" height="680" alt="붉은 단풍과 소나무 사이에 모인 가족" loading="lazy"></div>
+      <div class="scene-text">
+        <h2 id="family-title">우리 함께한 날</h2>
+        <p>여행지에서, 한 식탁에서.</p>
+        <a class="chapter-link" href="#albums" data-chapter="together">가족 사진 보기 <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+    <section class="scene scene-little" aria-labelledby="little-title">
+      <div class="scene-image"><img src="photo-35.webp" width="680" height="1020" alt="전시장에서 유모차와 함께 찍은 거울 사진" loading="lazy"></div>
+      <div class="scene-text">
+        <h2 id="little-title">작고 귀여운 순간들</h2>
+        <a class="chapter-link" href="#albums" data-chapter="little">사진 더 보기 <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+    <section class="scene scene-birthday" aria-labelledby="birthday-title">
+      <div class="scene-image"><img src="photo-44.webp" width="1020" height="680" alt="분홍색과 흰색 꽃을 올린 생일 케이크" loading="lazy"></div>
+      <div class="scene-text">
+        <h2 id="birthday-title">오늘은 진영데이!</h2>
+        <p>사랑하는 엄마, 칠순 축하해요.</p>
+        <a class="chapter-link" href="#albums" data-chapter="birthday">생일 사진 보기 <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </div>
+  <section class="albums wrap" id="albums" aria-labelledby="album-title">
+    <div class="section-top">
+      <h2 id="album-title">사진첩</h2>
+      <p id="album-count" aria-live="polite">사진 44장</p>
+    </div>
+    <nav class="filters" aria-label="사진첩 주제"></nav>
+    <div id="chapter-grid"></div>
+    <noscript><p>사진첩을 펼치려면 브라우저의 JavaScript를 켜 주세요.</p></noscript>
+  </section>
+  <footer class="letter">
+    <h2>엄마, 사랑해요.</h2>
+    <p>다음에도 좋은 곳에 같이 가고,<br>우리 사진도 더 많이 찍어요.</p>
+    <a href="#top">처음으로 ↑</a>
+  </footer>
+</main>
+<dialog id="photo-viewer" aria-labelledby="photo-caption">
+  <div class="viewer">
+    <div class="viewer-head"><span id="photo-count" aria-live="polite"></span><button type="button" class="icon" id="close-viewer" aria-label="닫기" autofocus>×</button></div>
+    <img id="large-photo" alt="">
+    <div class="viewer-foot">
+      <button type="button" class="icon" id="previous" aria-label="이전 사진">‹</button>
+      <p id="photo-caption" aria-live="polite"></p>
+      <button type="button" class="icon" id="next" aria-label="다음 사진">›</button>
+    </div>
+  </div>
+</dialog>
+</body>
+</html>
